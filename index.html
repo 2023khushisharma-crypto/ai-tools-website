@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tools Hub | Discover Smart AI Tools</title>
+<meta name="description" content="Discover the best AI tools for writing, designing, marketing, SEO and productivity. Explore powerful AI tools in one place.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#080d1c;color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:#10182b;position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:bold;color:#8d9cff}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a:hover{color:#a5b4fc}
+.hero{padding:85px 8%;display:flex;align-items:center;gap:40px;min-height:490px;background:linear-gradient(120deg,#111b3c,#25134a)}
+.hero-content{flex:1}
+.hero h1{font-size:48px;line-height:1.2;margin:15px 0}
+.hero h1 span{color:#a5a5ff}
+.hero p{color:#c5cce0;margin-bottom:25px;font-size:17px}
+.btn{display:inline-block;background:#7765f7;padding:13px 25px;border-radius:9px;font-weight:bold}
+.btn:hover{background:#5946dc}
+.hero img{width:42%;border-radius:20px;object-fit:cover;max-height:320px}
+section{padding:65px 8%}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{font-size:32px}
+.heading p{color:#aab3ca;margin-top:8px}
+.search{display:block;width:100%;max-width:600px;margin:0 auto 30px;padding:15px 20px;border:1px solid #37466c;border-radius:12px;background:#131d34;color:white;font-size:16px}
+.categories{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:35px}
+.categories button{padding:10px 19px;border:1px solid #48537a;border-radius:25px;background:#151e35;color:white;cursor:pointer}
+.categories button:hover,.categories button.active{background:#7765f7;border-color:#7765f7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+.card{background:#131d34;border:1px solid #263453;border-radius:15px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#8c82ff}
+.card img{width:100%;height:175px;object-fit:cover}
+.card-content{padding:20px}
+.tag{color:#a8a2ff;font-size:12px;font-weight:bold}
+.card h3{margin:8px 0;font-size:21px}
+.card p{color:#b9c3d8;font-size:14px;min-height:65px}
+.card a{display:inline-block;margin-top:15px;color:#aaa1ff;font-weight:bold}
+.about{background:#111a30;display:flex;align-items:center;gap:40px}
+.about div{flex:1}
+.about img{width:42%;border-radius:18px}
+.about p{color:#bbc4d8;margin-top:15px}
+.contact{background:linear-gradient(130deg,#20164b,#101d3d);text-align:center}
+.contact p{color:#c4cbe0;margin:12px}
+.contact-info{margin:25px auto;max-width:550px;background:#ffffff12;padding:25px;border-radius:15px}
+.contact-info p{margin:12px}
+footer{text-align:center;padding:25px;background:#070b16;color:#9ba6c2}
+footer a{color:#aaa1ff}
+@media(max-width:800px){
+ .hero{flex-direction:column;text-align:center;padding:60px 6%}
+ .hero h1{font-size:36px}
+ .hero img{width:100%}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .about{flex-direction:column}
+ .about img{width:100%}
+ nav{padding:15px 5%}
+ nav ul{gap:12px;font-size:12px}
+}
+@media(max-width:520px){
+ .grid{grid-template-columns:1fr}
+ nav ul{gap:9px}
+ .logo{font-size:19px}
+ section{padding:50px 6%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="logo">✦ AI Tools Hub</div>
+ <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#tools">AI Tools</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+ </ul>
+</nav>
+
+<header class="hero" id="home">
+ <div class="hero-content">
+  <span>WELCOME TO THE FUTURE</span>
+  <h1>Discover the Power of <span>Artificial Intelligence</span></h1>
+  <p>Explore amazing AI tools that make your work smarter, faster and easier. Everything you need, all in one place.</p>
+  <a href="#tools" class="btn">Explore AI Tools →</a>
+ </div>
+ <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900" alt="Artificial intelligence technology">
+</header>
+
+<section id="tools">
+ <div class="heading">
+  <h2>Explore AI Tools</h2>
+  <p>Find the perfect AI tool for your next big idea.</p>
+ </div>
+
+ <input class="search" id="search" placeholder="🔍 Search AI tools..." oninput="filterTools()">
+
+ <div class="categories">
+  <button class="active" onclick="filterCategory('All',this)">All Tools</button>
+  <button onclick="filterCategory('Writing',this)">Writing</button>
+  <button onclick="filterCategory('Design',this)">Design</button>
+  <button onclick="filterCategory('Research',this)">Research</button>
+  <button onclick="filterCategory('Marketing',this)">Marketing</button>
+  <button onclick="filterCategory('Productivity',this)">Productivity</button>
+ </div>
+
+ <div class="grid" id="toolGrid">
+
+ <article class="card" data-category="Writing">
+  <img src="https://images.unsplash.com/photo-1675557009875-436f4e8c7b14?w=600" alt="ChatGPT">
+  <div class="card-content">
+   <span class="tag">WRITING</span><h3>ChatGPT</h3>
+   <p>An AI assistant for writing, learning, brainstorming and everyday tasks.</p>
+   <a href="https://chatgpt.com/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Writing">
+  <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600" alt="Claude AI">
+  <div class="card-content">
+   <span class="tag">WRITING</span><h3>Claude AI</h3>
+   <p>Get help with writing, analysis, ideas and complex tasks.</p>
+   <a href="https://claude.ai/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Writing">
+  <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600" alt="Gemini">
+  <div class="card-content">
+   <span class="tag">WRITING</span><h3>Google Gemini</h3>
+   <p>Explore Google's AI assistant for ideas, research and creativity.</p>
+   <a href="https://gemini.google.com/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Design">
+  <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600" alt="Canva">
+  <div class="card-content">
+   <span class="tag">DESIGN</span><h3>Canva</h3>
+   <p>Create beautiful graphics, presentations, social media posts and more.</p>
+   <a href="https://www.canva.com/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Research">
+  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600" alt="Perplexity">
+  <div class="card-content">
+   <span class="tag">RESEARCH</span><h3>Perplexity AI</h3>
+   <p>Discover information and explore research with AI-powered answers.</p>
+   <a href="https://www.perplexity.ai/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Marketing">
+  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Marketing">
+  <div class="card-content">
+   <span class="tag">MARKETING</span><h3>HubSpot</h3>
+   <p>Explore tools for marketing, customer management and business growth.</p>
+   <a href="https://www.hubspot.com/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Design">
+  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600" alt="Remove background">
+  <div class="card-content">
+   <span class="tag">DESIGN</span><h3>Remove.bg</h3>
+   <p>Remove image backgrounds quickly and make clean visuals.</p>
+   <a href="https://www.remove.bg/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Productivity">
+  <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600" alt="Notion">
+  <div class="card-content">
+   <span class="tag">PRODUCTIVITY</span><h3>Notion</h3>
+   <p>Organize your notes, projects and work in one workspace.</p>
+   <a href="https://www.notion.so/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ <article class="card" data-category="Design">
+  <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600" alt="CapCut">
+  <div class="card-content">
+   <span class="tag">DESIGN</span><h3>CapCut</h3>
+   <p>Create and edit engaging videos with creative editing features.</p>
+   <a href="https://www.capcut.com/" target="_blank">Explore Tool ↗</a>
+  </div>
+ </article>
+
+ </div>
+ <p id="noResults" style="display:none;text-align:center;margin-top:25px">No tools found. Try another search.</p>
+</section>
+
+<section class="about" id="about">
+ <div>
+  <span class="tag">ABOUT OUR WEBSITE</span>
+  <h2 style="font-size:32px;margin-top:10px">Making AI Simple for Everyone</h2>
+  <p>AI Tools Hub is a platform designed to help students, creators, professionals and businesses discover useful artificial intelligence tools.</p>
+  <p>Our goal is to make technology easier to explore and help people work smarter every day.</p>
+ </div>
+ <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Technology and innovation">
+</section>
+
+<section class="contact" id="contact">
+ <div class="heading">
+  <h2>Let's Connect!</h2>
+  <p>Have a question, suggestion or collaboration idea? Contact us.</p>
+ </div>
+ <div class="contact-info">
+  <p>📞 Phone: +91 YOUR NUMBER</p>
+  <p>✉️ Email: YOUR EMAIL ADDRESS</p>
+  <p>📍 Location: India</p>
+  <a class="btn" href="https://wa.me/91YOURNUMBER" target="_blank">Chat on WhatsApp</a>
+ </div>
+</section>
+
+<footer>
+ <p>© 2026 AI Tools Hub. All Rights Reserved.</p>
+ <p>Made with creativity & technology ✦</p>
+</footer>
+
+<script>
+let selectedCategory = "All";
+
+function filterCategory(category,button){
+ selectedCategory = category;
+ document.querySelectorAll(".categories button").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+ filterTools();
+}
+
+function filterTools(){
+ let query = document.getElementById("search").value.toLowerCase();
+ let cards = document.querySelectorAll(".card");
+ let visible = 0;
+
+ cards.forEach(card=>{
+  let matchText = card.innerText.toLowerCase().includes(query);
+  let matchCategory = selectedCategory==="All" || card.dataset.category===selectedCategory;
+  card.style.display = matchText && matchCategory ? "block" : "none";
+  if(matchText && matchCategory) visible++;
+ });
+
+ document.getElementById("noResults").style.display = visible ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
